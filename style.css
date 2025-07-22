@@ -1,143 +1,92 @@
-/* STYLE.CSS POUR ETERNAWEB */
+/* STYLE.CSS POUR ETERNAGLOW */
 
 body {
   margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background-image: url("eternaweb-fond.png");
+  font-family: 'Georgia', 'Segoe UI', serif;
+  background-image: url("eternaglow-fond.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  color: #3e3e3e;
-  padding: 60px 20px;
+  color: #4a3f35;
+  padding: 30px 20px;
+  line-height: 1.6;
+}
+
+.nav-discrete {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 12px 0;
+  font-size: 1.1em;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  border-bottom: 1px solid #d9cfc7;
+}
+
+.nav-discrete a {
+  text-decoration: none;
+  color: #7a5c45;
+  transition: color 0.3s;
+}
+
+.nav-discrete a:hover {
+  color: #c9a785;
 }
 
 .container {
-  background-color: rgba(255, 255, 255, 0.85);
-  max-width: 700px;
-  margin: auto;
+  background-color: rgba(255, 255, 255, 0.93);
+  max-width: 750px;
+  margin: 40px auto;
   padding: 40px;
   border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 h1 {
-  color: #7a5c45;
-  font-size: 2.4em;
+  text-align: center;
+  font-size: 2.6em;
+  color: #a1865e;
   margin-bottom: 10px;
 }
 
 h2 {
   font-size: 1.4em;
-  color: #5e4b3c;
-  margin-bottom: 30px;
+  margin-top: 40px;
+  color: #745d4a;
+  text-align: center;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
-}
-
-li {
-  margin: 12px 0;
+p {
   font-size: 1.05em;
+  margin: 10px 0 20px;
 }
 
-.button {
+.produit {
+  border-bottom: 1px solid #e5dcd3;
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+}
+
+img {
+  display: block;
+  max-width: 250px;
+  width: 100%;
+  border-radius: 12px;
+  margin: 0 auto 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.btn-whatsapp, .btn-paypal {
   display: inline-block;
-  background-color: #dab49d;
-  color: white;
-  padding: 15px 25px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
-  transition: background 0.3s;
-  margin-top: 20px;
-}
-
-.button:hover {
-  background-color: #b38a6b;
-  cursor: pointer;
-}
-
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25d366;
-  color: white;
-  border-radius: 50%;
-  width: 55px;
-  height: 55px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  text-decoration: none;
-  z-index: 1000;
-}
-
-.whatsapp:hover {
-  background-color: #1ebe57;
-}
-
-footer {
-  margin-top: 40px;
-  font-size: 0.9em;
-  color: #6e6e6e;
-}
-
-.avenir {
-  margin-top: 40px;
-  font-style: italic;
-  color: #666;
-}
-
-.container {
-  animation: fadeIn 1.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-.button, .faq {
-  transition: transform 0.3s ease;
-}
-
-.button:hover, .faq:hover {
-  transform: scale(1.05);
-}
-
-.whatsapp {
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(-6px); }
-  100% { transform: translateY(0); }
-}
-
-.btn-icon {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
+  margin-top: 10px;
   padding: 12px 20px;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
   text-decoration: none;
-  transition: transform 0.3s ease;
-}
-
-.btn-icon:hover {
-  transform: scale(1.05);
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.3s, background-color 0.3s ease;
+  font-size: 0.95em;
 }
 
 .btn-whatsapp {
@@ -145,27 +94,30 @@ footer {
   color: white;
 }
 
+.btn-whatsapp:hover {
+  background-color: #1ebe57;
+  transform: scale(1.05);
+}
+
 .btn-paypal {
   background-color: #ffc439;
-  color: black;
-}
-.nav-discrete {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  background-color: rgba(255, 255, 255, 0.6);
-  padding: 10px 0;
-  font-size: 1em;
-  font-weight: bold;
-  border-bottom: 1px solid #ccc;
+  color: #1a1a1a;
 }
 
-.nav-discrete a {
-  text-decoration: none;
-  color: #5e4b3c;
-  transition: color 0.3s;
+.btn-paypal:hover {
+  background-color: #e6b800;
+  transform: scale(1.05);
 }
 
-.nav-discrete a:hover {
-  color: #b38a6b;
+footer {
+  margin-top: 60px;
+  font-size: 0.85em;
+  text-align: center;
+  color: #888;
+}
+
+/* Animation douce d’entrée */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
