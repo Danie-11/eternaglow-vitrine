@@ -11,5 +11,5 @@ Proposer une vitrine en ligne douce et esthétique pour découvrir mes création
 - Bouton WhatsApp & lien de paiement
 
 ## 📩 Contact
-- WhatsApp : +33 7 49 46 14 34
+- WhatsApp : +33749586005
 - Instagram : @eterna.glow
