@@ -94,9 +94,9 @@ img {
   color: white;
 }
 
-.btn-whatsapp:hover {
-  background-color: #1ebe57;
-  transform: scale(1.05);
+.btn-whatsapp {
+  background-color: #25D366;
+  color: white;
 }
 
 .btn-paypal {
