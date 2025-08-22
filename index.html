@@ -3,175 +3,125 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>EternaGlow — Bougies, Macramé & Soins</title>
-
-  <!-- Favicon : renomme le fichier en 32x32 (pas ×) -->
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-eg-32x32.png" />
-
-  <!-- Meta SEO -->
-  <meta name="description" content="Créations artisanales EternaGlow : bougies naturelles, macramé poétique et rituels de bien‑être. Sur‑mesure, événements, douceurs du quotidien." />
-  <meta property="og:title" content="EternaGlow — Vitrine artisanale" />
-  <meta property="og:description" content="Bougies • Macramé • Soins — ambiance pastel & poétique." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="og-cover.jpg" />
-
+  <title>Bougies — EternaGlow</title>
+  <meta name="description" content="Bougies artisanales EternaGlow : bougies transparentes avec inclusions, bougies moulées, éditions poétiques." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="index.html" aria-label="EternaGlow accueil">
-        <span class="brand-logo" aria-hidden="true">✨</span>
-        <span class="brand-text">EternaGlow</span>
+      <a class="brand" href="index.html" aria-label="EternaGlow — Accueil">
+        <span class="brand-logo">✨</span><span class="brand-text">EternaGlow</span>
       </a>
 
       <nav class="nav">
-        <a href="#accueil" class="nav-link">Accueil</a>
-        <a href="#bougies" class="nav-link">Bougies</a>
-        <a href="#macrame" class="nav-link">Macramé</a>
-        <a href="#soins" class="nav-link">Soins</a>
+        <a href="bougies.html" class="nav-link" aria-current="page">Bougies</a>
+        <a href="savons.html" class="nav-link">Savons</a>
+        <a href="bracelets.html" class="nav-link">Bracelets</a>
+        <a href="rituels.html" class="nav-link">Rituels</a>
         <a href="temoignages.html" class="nav-link">Témoignages & Tarifs</a>
         <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="apropos.html" class="nav-link">À propos</a>
       </nav>
 
-      <div class="cta-bar">
-        <a class="btn btn-wa" href="https://wa.me/33749586005?text=Bonjour%20EternaGlow%20!%20J%E2%80%99aimerais%20des%20infos%20:%20" target="_blank" rel="noopener">WhatsApp</a>
-        <a class="btn btn-ig" href="https://instagram.com/AtelierEternaGlow" target="_blank" rel="noopener">Instagram</a>
+      <!-- Panier -->
+      <div class="cart-area">
+        <button class="cart-button" id="openCartBtn" aria-label="Ouvrir le panier">
+          🛒 <span id="cartCount">0</span>
+        </button>
       </div>
     </div>
   </header>
 
-  <main>
-    <!-- Hero / Accueil -->
-    <section id="accueil" class="hero">
-      <div class="wrap">
-        <h1>Une lumière douce pour la maison et le cœur</h1>
-        <p class="lead">Bougies naturelles, macramé poétique et petites routines de bien‑être — façonnés à la main, en petites séries, pour un quotidien plus calme.</p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="#bougies">Découvrir les bougies</a>
-          <a class="btn" href="temoignages.html">Voir tarifs & avis</a>
-        </div>
-      </div>
-    </section>
+  <!-- Contenu -->
+  <main class="section">
+    <div class="wrap">
+      <h1>Bougies artisanales</h1>
+      <p class="sub">Transparences poétiques, inclusions naturelles & formes moulées — en petites séries.</p>
 
-    <!-- Produits : Bougies -->
-    <section id="bougies" class="section">
-      <div class="wrap">
-        <h2>Bougies artisanales</h2>
-        <p class="sub">Cire végétale • Mèches coton • Parfums délicats</p>
-
-        <div class="grid">
-          <!-- Carte produit -->
-          <article class="card">
-            <img src="bougie1.jpg" alt="Bougie parfumée Lavande dans pot en verre" width="640" height="640" loading="lazy" />
-            <div class="card-body">
-              <h3>Bougie Lavande</h3>
-              <p>Cire végétale, notes apaisantes, pot en verre recyclable. 140g.</p>
-              <p class="price">12 €</p>
-              <div class="card-actions">
-                <a class="btn btn-wa" href="https://wa.me/33749586005?text=Bonjour%20EternaGlow%2C%20je%20souhaite%20commander%20la%20Bougie%20Lavande%20(12%E2%82%AC)">Commander</a>
-                <a class="btn btn-paypal" href="https://www.paypal.com/paypalme/tonlienpaypal/12" target="_blank" rel="noopener">Payer</a>
-              </div>
+      <div class="grid">
+        <!-- Produit 1 -->
+        <article class="card product" data-id="CAND-TRANSP-COQ" data-name="Bougie transparente — Coquillages" data-price="18">
+          <img src="images/bougie-transparente-coquillages.jpg" alt="Bougie transparente avec coquillages" loading="lazy" width="640" height="640" />
+          <div class="card-body">
+            <h3>Bougie transparente — Coquillages</h3>
+            <p>Effet verre clair, inclusions de coquillages naturels. Pièce unique.</p>
+            <p class="price">18 €</p>
+            <div class="card-actions">
+              <button class="btn btn-primary addToCart">Ajouter au panier</button>
             </div>
-          </article>
+          </div>
+        </article>
 
-          <article class="card">
-            <img src="bougie2.jpg" alt="Bougie Collection Chakra pastel" width="640" height="640" loading="lazy" />
-            <div class="card-body">
-              <h3>Collection Chakra (coffret)</h3>
-              <p>7 mini‑bougies pastel pour accompagner l’humeur du jour.</p>
-              <p class="price">38 €</p>
-              <div class="card-actions">
-                <a class="btn btn-wa" href="https://wa.me/33749586005?text=Bonjour%20EternaGlow%2C%20je%20souhaite%20le%20coffret%20Chakra%20(38%E2%82%AC)">Commander</a>
-                <a class="btn btn-paypal" href="https://www.paypal.com/paypalme/tonlienpaypal/38" target="_blank" rel="noopener">Payer</a>
-              </div>
+        <!-- Produit 2 -->
+        <article class="card product" data-id="CAND-TRANSP-FLEURS" data-name="Bougie transparente — Fleurs séchées" data-price="18">
+          <img src="images/bougie-transparente-fleurs.jpg" alt="Bougie transparente avec fleurs séchées" loading="lazy" width="640" height="640" />
+          <div class="card-body">
+            <h3>Bougie transparente — Fleurs séchées</h3>
+            <p>Inclusions florales délicates. Parfums doux au choix.</p>
+            <p class="price">18 €</p>
+            <div class="card-actions">
+              <button class="btn btn-primary addToCart">Ajouter au panier</button>
             </div>
-          </article>
-        </div>
-      </div>
-    </section>
+          </div>
+        </article>
 
-    <!-- Produits : Macramé -->
-    <section id="macrame" class="section">
-      <div class="wrap">
-        <h2>Macramé & décor</h2>
-        <p class="sub">Fibres naturelles • Nœuds poétiques</p>
-
-        <div class="grid">
-          <article class="card">
-            <img src="macrame1.jpg" alt="Suspension macramé pour plante" width="640" height="800" loading="lazy" />
-            <div class="card-body">
-              <h3>Suspension végétale</h3>
-              <p>Coton naturel, longueur 80 cm. Idéale pour vos plantes.</p>
-              <p class="price">25 €</p>
-              <div class="card-actions">
-                <a class="btn btn-wa" href="https://wa.me/33749586005?text=Bonjour%20EternaGlow%2C%20je%20souhaite%20la%20Suspension%20macram%C3%A9%20(25%E2%82%AC)">Commander</a>
-                <a class="btn btn-paypal" href="https://www.paypal.com/paypalme/tonlienpaypal/25" target="_blank" rel="noopener">Payer</a>
-              </div>
+        <!-- Produit 3 -->
+        <article class="card product" data-id="CAND-MOUL-FORME" data-name="Bougie moulée — Forme poétique" data-price="14">
+          <img src="images/bougie-moulee-forme.jpg" alt="Bougie moulée en forme (ex. fleur, lune ou cœur)" loading="lazy" width="640" height="640" />
+          <div class="card-body">
+            <h3>Bougie moulée — Forme poétique</h3>
+            <p>Formes au choix (fleur, lune, cœur…). Cire végétale.</p>
+            <p class="price">14 €</p>
+            <div class="card-actions">
+              <button class="btn btn-primary addToCart">Ajouter au panier</button>
             </div>
-          </article>
+          </div>
+        </article>
 
-          <article class="card">
-            <img src="macrame2.jpg" alt="Tenture murale macramé tons naturels" width="640" height="800" loading="lazy" />
-            <div class="card-body">
-              <h3>Tenture murale</h3>
-              <p>Relief doux qui structure l’espace. Format 50×70 cm.</p>
-              <p class="price">45 €</p>
-              <div class="card-actions">
-                <a class="btn btn-wa" href="https://wa.me/33749586005?text=Bonjour%20EternaGlow%2C%20je%20souhaite%20la%20Tenture%20murale%20(45%E2%82%AC)">Commander</a>
-                <a class="btn btn-paypal" href="https://www.paypal.com/paypalme/tonlienpaypal/45" target="_blank" rel="noopener">Payer</a>
-              </div>
+        <!-- Produit 4 (option) -->
+        <article class="card product" data-id="CAND-CHAKRA" data-name="Mini-coffret — 3 Bougies Chakra" data-price="20">
+          <img src="images/bougie-chakra-coffret.jpg" alt="Mini coffret de 3 bougies chakra pastel" loading="lazy" width="640" height="640" />
+          <div class="card-body">
+            <h3>Mini‑coffret — 3 Bougies Chakra</h3>
+            <p>Trois teintes pastel assorties, rituel du soir.</p>
+            <p class="price">20 €</p>
+            <div class="card-actions">
+              <button class="btn btn-primary addToCart">Ajouter au panier</button>
             </div>
-          </article>
-        </div>
+          </div>
+        </article>
       </div>
-    </section>
 
-    <!-- Produits : Soins -->
-    <section id="soins" class="section">
-      <div class="wrap">
-        <h2>Rituels & Soins</h2>
-        <p class="sub">Bien‑être du quotidien • Douceur & clarté</p>
-
-        <div class="grid">
-          <article class="card">
-            <img src="savon1.jpg" alt="Savon artisanal au karité, saponifié à froid" width="640" height="640" loading="lazy" />
-            <div class="card-body">
-              <h3>Savon au karité</h3>
-              <p>Saponification à froid, peaux sensibles. 90 g.</p>
-              <p class="price">6 €</p>
-              <div class="card-actions">
-                <a class="btn btn-wa" href="https://wa.me/33749586005?text=Bonjour%20EternaGlow%2C%20je%20souhaite%20le%20Savon%20au%20karit%C3%A9%20(6%E2%82%AC)">Commander</a>
-                <a class="btn btn-paypal" href="https://www.paypal.com/paypalme/tonlienpaypal/6" target="_blank" rel="noopener">Payer</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Bande contact -->
-    <section class="contact-band" aria-labelledby="contact-title">
-      <div class="wrap">
-        <h2 id="contact-title">Parlons de votre projet</h2>
-        <p>Besoin d’un coffret personnalisé ou d’un devis pour événement ?</p>
-        <div class="band-actions">
-          <a class="btn btn-wa" href="https://wa.me/33749586005?text=Bonjour%20EternaGlow%2C%20j%E2%80%99aimerais%20un%20devis%20sur‑mesure%20:">Écrire sur WhatsApp</a>
-          <a class="btn btn-ig" href="https://instagram.com/AtelierEternaGlow" target="_blank" rel="noopener">Instagram</a>
-        </div>
-        <p class="tiny">Tél : 07 49 58 60 05 — Réponses sous 24–48h ouvrées.</p>
-      </div>
-    </section>
+      <p class="sub" style="margin-top:16px;">
+        Besoin d’une **forme particulière** ou d’une **inclusion spécifique** (coquillages, fleurs, cristaux) ?  
+        <a class="btn btn-wa" href="https://wa.me/33749586005?text=Bonjour%20EternaGlow%2C%20j%E2%80%99aimerais%20une%20bougie%20personnalis%C3%A9e%20avec%20..." target="_blank" rel="noopener">Parlez‑nous de votre idée</a>
+      </p>
+    </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <p>© 2025 EternaGlow — Tous droits réservés</p>
-      <nav class="footer-nav">
-        <a href="mentions-legales.html">Mentions légales</a>
-        <a href="politique-confidentialite.html">Confidentialité</a>
-      </nav>
+  <!-- Drawer Panier -->
+  <aside id="cartDrawer" class="cart-drawer" aria-hidden="true" aria-labelledby="cartTitle" role="dialog">
+    <div class="cart-header">
+      <h2 id="cartTitle">Votre panier</h2>
+      <button id="closeCartBtn" class="cart-close" aria-label="Fermer le panier">×</button>
     </div>
-  </footer>
+
+    <div id="cartItems" class="cart-items"></div>
+
+    <div class="cart-footer">
+      <div class="cart-total">
+        Total : <span id="cartTotal">0 €</span>
+      </div>
+      <div class="cart-actions">
+        <button id="clearCartBtn" class="btn">Vider</button>
+        <a id="checkoutWhatsApp" class="btn btn-wa" href="#" target="_blank" rel="noopener">Valider sur WhatsApp</a>
+      </div>
+      <p class="tiny" style="margin-top:8px;">Le message récapitulatif s’ouvre dans WhatsApp. Vous pourrez encore modifier avant d’envoyer.</p>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
 </body>
 </html>
