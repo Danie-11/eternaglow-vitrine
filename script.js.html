@@ -1,0 +1,159 @@
+/* ===== Mini-panier EternaGlow (localStorage + WhatsApp checkout) ===== */
+
+const WA_NUMBER = "33749586005"; // numéro WhatsApp (France)
+const CURRENCY = "€";
+
+// --- Helpers
+const qs = (sel, el = document) => el.querySelector(sel);
+const qsa = (sel, el = document) => [...el.querySelectorAll(sel)];
+const fmtPrice = (n) => `${Number(n).toFixed(2).replace(".00","")} ${CURRENCY}`;
+
+// --- State
+const CART_KEY = "eg_cart_v1";
+const loadCart = () => JSON.parse(localStorage.getItem(CART_KEY) || "[]");
+const saveCart = (items) => localStorage.setItem(CART_KEY, JSON.stringify(items));
+const cartCountEl = qs("#cartCount");
+const cartDrawer = qs("#cartDrawer");
+const cartItemsEl = qs("#cartItems");
+const cartTotalEl = qs("#cartTotal");
+
+// --- UI control
+function openCart() {
+  cartDrawer.setAttribute("aria-hidden", "false");
+  cartDrawer.classList.add("open");
+}
+function closeCart() {
+  cartDrawer.setAttribute("aria-hidden", "true");
+  cartDrawer.classList.remove("open");
+}
+
+// --- Render
+function renderCart() {
+  const cart = loadCart();
+  // Count
+  const count = cart.reduce((a, it) => a + it.qty, 0);
+  if (cartCountEl) cartCountEl.textContent = count;
+
+  // Items
+  if (!cartItemsEl) return;
+  if (cart.length === 0) {
+    cartItemsEl.innerHTML = `<p class="tiny" style="opacity:.7;padding:12px;">Votre panier est vide.</p>`;
+    cartTotalEl.textContent = fmtPrice(0);
+    updateWhatsAppLink([]);
+    return;
+    }
+  cartItemsEl.innerHTML = cart.map((it, idx) => `
+    <div class="cart-line">
+      <div class="line-info">
+        <strong>${it.name}</strong>
+        <span class="muted">${fmtPrice(it.price)}</span>
+      </div>
+      <div class="line-qty">
+        <button class="qty-btn" data-idx="${idx}" data-op="-">−</button>
+        <span class="qty">${it.qty}</span>
+        <button class="qty-btn" data-idx="${idx}" data-op="+">+</button>
+      </div>
+      <button class="remove-line" data-idx="${idx}" aria-label="Supprimer l'article">×</button>
+    </div>
+  `).join("");
+
+  // Total
+  const total = cart.reduce((a, it) => a + it.price * it.qty, 0);
+  cartTotalEl.textContent = fmtPrice(total);
+
+  // WA link
+  updateWhatsAppLink(cart);
+}
+
+function updateWhatsAppLink(cart) {
+  const waBtn = qs("#checkoutWhatsApp");
+  if (!waBtn) return;
+
+  if (!cart || cart.length === 0) {
+    waBtn.setAttribute("href", `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent("Bonjour EternaGlow, j’aimerais commander :")}`);
+    return;
+  }
+
+  const lines = cart.map(it => `• ${it.name} ×${it.qty} — ${fmtPrice(it.price * it.qty)}`);
+  const total = cart.reduce((a, it) => a + it.price * it.qty, 0);
+  const msg = [
+    "Bonjour EternaGlow, voici ma commande :",
+    ...lines,
+    `Total : ${fmtPrice(total)}`,
+    "",
+    "→ Livraison ou retrait ?",
+    "→ Nom/Prénom :",
+  ].join("\n");
+
+  waBtn.setAttribute("href", `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`);
+}
+
+// --- Events
+function bindProductButtons() {
+  qsa(".product .addToCart").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      const card = e.currentTarget.closest(".product");
+      const id = card.dataset.id;
+      const name = card.dataset.name;
+      const price = Number(card.dataset.price || 0);
+
+      const cart = loadCart();
+      const existing = cart.find(it => it.id === id);
+      if (existing) existing.qty += 1;
+      else cart.push({ id, name, price, qty: 1 });
+
+      saveCart(cart);
+      renderCart();
+      openCart();
+    });
+  });
+}
+
+function bindCartControls() {
+  const openBtn = qs("#openCartBtn");
+  const closeBtn = qs("#closeCartBtn");
+  const clearBtn = qs("#clearCartBtn");
+
+  openBtn && openBtn.addEventListener("click", openCart);
+  closeBtn && closeBtn.addEventListener("click", closeCart);
+  clearBtn && clearBtn.addEventListener("click", () => {
+    saveCart([]);
+    renderCart();
+  });
+
+  // Delegation for qty +/- and remove
+  cartItemsEl && cartItemsEl.addEventListener("click", (e) => {
+    const cart = loadCart();
+    const idx = e.target.dataset.idx;
+    if (e.target.classList.contains("qty-btn")) {
+      const op = e.target.dataset.op;
+      if (op === "+" && cart[idx]) cart[idx].qty += 1;
+      if (op === "-" && cart[idx]) cart[idx].qty = Math.max(1, cart[idx].qty - 1);
+      saveCart(cart); renderCart();
+    }
+    if (e.target.classList.contains("remove-line")) {
+      cart.splice(Number(idx), 1);
+      saveCart(cart); renderCart();
+    }
+  });
+
+  // Fermer en cliquant hors du drawer (optionnel)
+  document.addEventListener("click", (e) => {
+    if (!cartDrawer) return;
+    if (!cartDrawer.classList.contains("open")) return;
+    const clickedInside = cartDrawer.contains(e.target) || (qs("#openCartBtn") && qs("#openCartBtn").contains(e.target));
+    if (!clickedInside) closeCart();
+  });
+
+  // Échap pour fermer
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeCart();
+  });
+}
+
+// --- Init
+document.addEventListener("DOMContentLoaded", () => {
+  bindProductButtons();
+  bindCartControls();
+  renderCart();
+});
