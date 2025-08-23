@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Savons — EternaGlow</title>
+  <meta name="description" content="Savons artisanaux : transparent avec fleurs et doux karité — saponifiés avec soin." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html"><span class="brand-logo">✨</span><span class="brand-text">EternaGlow</span></a>
+      <nav class="nav">
+        <a href="bougies.html" class="nav-link">Bougies</a>
+        <a href="savons.html" class="nav-link" aria-current="page">Savons</a>
+        <a href="bracelets.html" class="nav-link">Bracelets</a>
+        <a href="rituels.html" class="nav-link">Rituels</a>
+        <a href="temoignages.html" class="nav-link">Témoignages & Tarifs</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="apropos.html" class="nav-link">À propos</a>
+      </nav>
+      <div class="cart-area">
+        <button class="cart-button" id="openCartBtn">🛒 <span id="cartCount">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="wrap">
+      <h1>Savons artisanaux</h1>
+      <p class="sub">Transparents aux fleurs séchées & recette douce au karité.</p>
+
+      <div class="grid">
+        <article class="card product" data-id="SOAP-TRANSP-FLEUR" data-name="Savon transparent — Fleurs" data-price="7">
+          <img src="https://placehold.co/600x600/f0f9ff/475569?text=Savon+Transparent" alt="Savon transparent avec fleurs séchées — visuel à venir" width="600" height="600" loading="lazy" />
+          <div class="card-body">
+            <span class="badge">À venir</span>
+            <h3>Savon transparent — Fleurs</h3>
+            <p>Inclusions florales délicates. Mousse légère et rinçage facile.</p>
+            <p class="price">7 €</p>
+            <div class="card-actions">
+              <button class="btn btn-primary addToCart">Pré‑commander</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card product" data-id="SOAP-KARITE-NU" data-name="Savon doux — Karité" data-price="6">
+          <img src="https://placehold.co/600x600/f0f9ff/475569?text=Savon+Karit%C3%A9" alt="Savon doux au karité — visuel à venir" width="600" height="600" loading="lazy" />
+          <div class="card-body">
+            <span class="badge">Classique</span>
+            <h3>Savon doux — Karité</h3>
+            <p>Convient aux peaux sensibles. Sans colorant.</p>
+            <p class="price">6 €</p>
+            <div class="card-actions">
+              <button class="btn btn-primary addToCart">Pré‑commander</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <aside id="cartDrawer" class="cart-drawer" aria-hidden="true" role="dialog" aria-labelledby="cartTitle">
+    <div class="cart-header"><h2 id="cartTitle">Votre panier</h2><button id="closeCartBtn" class="cart-close">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total">Total : <span id="cartTotal">0 €</span></div>
+      <div class="cart-actions">
+        <button id="clearCartBtn" class="btn">Vider</button>
+        <a id="checkoutWhatsApp" class="btn btn-wa" href="#" target="_blank" rel="noopener">Valider sur WhatsApp</a>
+      </div>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
