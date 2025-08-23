@@ -3,16 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bougies — EternaGlow</title>
-  <meta name="description" content="Bougies artisanales : transparentes avec inclusions et formes moulées, en petites séries." />
+  <title>EternaGlow — Bougies, Savons, Bracelets & Rituels</title>
+  <meta name="description" content="EternaGlow : atelier artisanal poétique. Bougies transparentes, savons doux, bracelets macramé et rituels de bien‑être. Pré‑commandes et sur‑mesure." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="index.html"><span class="brand-logo">✨</span><span class="brand-text">EternaGlow</span></a>
+      <a class="brand" href="index.html" aria-label="EternaGlow — Accueil">
+        <span class="brand-logo">✨</span>
+        <span class="brand-text">EternaGlow</span>
+      </a>
+
       <nav class="nav">
-        <a href="bougies.html" class="nav-link" aria-current="page">Bougies</a>
+        <a href="bougies.html" class="nav-link">Bougies</a>
         <a href="savons.html" class="nav-link">Savons</a>
         <a href="bracelets.html" class="nav-link">Bracelets</a>
         <a href="rituels.html" class="nav-link">Rituels</a>
@@ -20,91 +25,168 @@
         <a href="faq.html" class="nav-link">FAQ</a>
         <a href="apropos.html" class="nav-link">À propos</a>
       </nav>
+
+      <!-- Panier -->
       <div class="cart-area">
-        <button class="cart-button" id="openCartBtn">🛒 <span id="cartCount">0</span></button>
+        <button class="cart-button" id="openCartBtn" aria-label="Ouvrir le panier">
+          🛒 <span id="cartCount">0</span>
+        </button>
       </div>
     </div>
   </header>
 
-  <main class="section">
+  <!-- Hero -->
+  <section class="hero">
     <div class="wrap">
-      <h1>Bougies artisanales</h1>
-      <p class="sub">Transparences poétiques, inclusions naturelles & formes moulées — en petites séries.</p>
-
-      <div class="grid">
-        <article class="card product" data-id="CAND-TRANSP-COQ" data-name="Bougie transparente — Coquillages" data-price="18">
-          <img src="https://placehold.co/600x600/fff4f8/9c8f87?text=Bougie+Coquillages" alt="Bougie transparente avec coquillages — visuel à venir" width="600" height="600" loading="lazy" />
-          <div class="card-body">
-            <span class="badge">À venir</span>
-            <h3>Bougie transparente — Coquillages</h3>
-            <p>Effet verre clair, inclusions de coquillages naturels. Fabrication à la demande.</p>
-            <p class="price">18 €</p>
-            <p class="tiny" style="opacity:.7">Photo réelle à venir — délai moyen 3–5 jours</p>
-            <div class="card-actions">
-              <button class="btn btn-primary addToCart">Pré‑commander</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="card product" data-id="CAND-TRANSP-FLEUR" data-name="Bougie transparente — Fleurs séchées" data-price="18">
-          <img src="https://placehold.co/600x600/fff4f8/9c8f87?text=Bougie+Fleurs" alt="Bougie transparente avec fleurs séchées — visuel à venir" width="600" height="600" loading="lazy" />
-          <div class="card-body">
-            <span class="badge">À venir</span>
-            <h3>Bougie transparente — Fleurs séchées</h3>
-            <p>Inclusions florales délicates. Parfums doux au choix.</p>
-            <p class="price">18 €</p>
-            <p class="tiny" style="opacity:.7">Photo réelle à venir — délai moyen 3–5 jours</p>
-            <div class="card-actions">
-              <button class="btn btn-primary addToCart">Pré‑commander</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="card product" data-id="CAND-MOULE-FORME" data-name="Bougie moulée — Forme poétique" data-price="14">
-          <img src="https://placehold.co/600x600/fff4f8/9c8f87?text=Bougie+Moul%C3%A9e" alt="Bougie moulée en forme (fleur, lune, cœur) — visuel à venir" width="600" height="600" loading="lazy" />
-          <div class="card-body">
-            <span class="badge">À venir</span>
-            <h3>Bougie moulée — Forme poétique</h3>
-            <p>Formes au choix (fleur, lune, cœur…). Cire végétale.</p>
-            <p class="price">14 €</p>
-            <div class="card-actions">
-              <button class="btn btn-primary addToCart">Pré‑commander</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="card product" data-id="CAND-MINI-CHAKRA" data-name="Mini‑coffret — 3 Bougies Chakra" data-price="20">
-          <img src="https://placehold.co/600x600/fff4f8/9c8f87?text=Coffret+Chakra" alt="Mini-coffret de 3 bougies chakra pastel — visuel à venir" width="600" height="600" loading="lazy" />
-          <div class="card-body">
-            <span class="badge">À venir</span>
-            <h3>Mini‑coffret — 3 Bougies Chakra</h3>
-            <p>Trois teintes pastel assorties, rituel du soir.</p>
-            <p class="price">20 €</p>
-            <div class="card-actions">
-              <button class="btn btn-primary addToCart">Pré‑commander</button>
-            </div>
-          </div>
-        </article>
+      <h1>Une lumière douce pour la maison et le cœur</h1>
+      <p class="lead">Bougies transparentes avec inclusions, savons délicats, bracelets macramé et rituels apaisants — façonnés à la main en petites séries.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="bougies.html">Découvrir les bougies</a>
+        <a class="btn" href="temoignages.html">Voir tarifs & avis</a>
       </div>
-
-      <p class="sub" style="margin-top:16px;">
-        Besoin d’une <strong>forme particulière</strong> ou d’une <strong>inclusion spécifique</strong> (coquillages, fleurs, cristaux) ?  
-        <a class="btn btn-wa" href="https://wa.me/33749586005?text=Bonjour%20EternaGlow%2C%20j%E2%80%99aimerais%20une%20bougie%20personnalis%C3%A9e%20avec%20..." target="_blank" rel="noopener">Parlez‑nous de votre idée</a>
-      </p>
     </div>
+  </section>
+
+  <!-- Catégories -->
+  <main>
+    <section class="section">
+      <div class="wrap">
+        <h2>Nos univers</h2>
+        <p class="sub">Des créations poétiques prêtes à être pré‑commandées. Le sur‑mesure est possible sur demande.</p>
+
+        <div class="grid">
+          <!-- Tuile Bougies -->
+          <a class="card" href="bougies.html" aria-label="Voir les bougies">
+            <img src="https://placehold.co/1000x700/fff4f8/9c8f87?text=Bougies+artisanales" alt="Vignette bougies artisanales — visuel à venir" width="1000" height="700" loading="lazy" />
+            <div class="card-body">
+              <h3>Bougies</h3>
+              <p>Transparences & inclusions (coquillages, fleurs), formes moulées.</p>
+            </div>
+          </a>
+
+          <!-- Tuile Savons -->
+          <a class="card" href="savons.html" aria-label="Voir les savons">
+            <img src="https://placehold.co/1000x700/f0f9ff/475569?text=Savons+artisanaux" alt="Vignette savons artisanaux — visuel à venir" width="1000" height="700" loading="lazy" />
+            <div class="card-body">
+              <h3>Savons</h3>
+              <p>Transparent aux fleurs séchées & recette douce au karité.</p>
+            </div>
+          </a>
+
+          <!-- Tuile Bracelets -->
+          <a class="card" href="bracelets.html" aria-label="Voir les bracelets macramé">
+            <img src="https://placehold.co/1000x700/ecfdf5/065f46?text=Bracelets+macram%C3%A9" alt="Vignette bracelets macramé — visuel à venir" width="1000" height="700" loading="lazy" />
+            <div class="card-body">
+              <h3>Bracelets macramé</h3>
+              <p>Cordon réglable avec perles (quartz rose, améthyste…).</p>
+            </div>
+          </a>
+
+          <!-- Tuile Rituels -->
+          <a class="card" href="rituels.html" aria-label="Voir les rituels">
+            <img src="https://placehold.co/1000x700/fffbeb/78350f?text=Rituels+apaisants" alt="Vignette rituels apaisants — visuel à venir" width="1000" height="700" loading="lazy" />
+            <div class="card-body">
+              <h3>Rituels</h3>
+              <p>Brume d’oreiller & sels de bain — gestes simples du soir.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mise en avant / produits phares (optionnel) -->
+    <section class="section">
+      <div class="wrap">
+        <h2>Nos pièces phares</h2>
+        <div class="grid">
+          <article class="card product" data-id="CAND-TRANSP-FLEUR" data-name="Bougie transparente — Fleurs séchées" data-price="18">
+            <img src="https://placehold.co/600x600/fff4f8/9c8f87?text=Bougie+Fleurs" alt="Bougie transparente avec fleurs séchées — visuel à venir" width="600" height="600" loading="lazy" />
+            <div class="card-body">
+              <span class="badge">À venir</span>
+              <h3>Bougie transparente — Fleurs séchées</h3>
+              <p>Effet verre clair, inclusions florales. Fabrication à la demande.</p>
+              <p class="price">18 €</p>
+              <div class="card-actions"><button class="btn btn-primary addToCart">Pré‑commander</button></div>
+            </div>
+          </article>
+
+          <article class="card product" data-id="SOAP-TRANSP-FLEUR" data-name="Savon transparent — Fleurs" data-price="7">
+            <img src="https://placehold.co/600x600/f0f9ff/475569?text=Savon+Transparent" alt="Savon transparent aux fleurs — visuel à venir" width="600" height="600" loading="lazy" />
+            <div class="card-body">
+              <span class="badge">À venir</span>
+              <h3>Savon transparent — Fleurs</h3>
+              <p>Inclusions florales délicates, mousse légère.</p>
+              <p class="price">7 €</p>
+              <div class="card-actions"><button class="btn btn-primary addToCart">Pré‑commander</button></div>
+            </div>
+          </article>
+
+          <article class="card product" data-id="BRAC-QUARTZ-ROSE" data-name="Bracelet macramé — Quartz rose" data-price="15">
+            <img src="https://placehold.co/600x600/ecfdf5/065f46?text=Quartz+Rose" alt="Bracelet macramé quartz rose — visuel à venir" width="600" height="600" loading="lazy" />
+            <div class="card-body">
+              <span class="badge">À venir</span>
+              <h3>Bracelet macramé — Quartz rose</h3>
+              <p>Cordon réglable, perle 8 mm. Couleurs au choix.</p>
+              <p class="price">15 €</p>
+              <div class="card-actions"><button class="btn btn-primary addToCart">Pré‑commander</button></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bande contact / sur-mesure -->
+    <section class="contact-band" aria-labelledby="surmesure">
+      <div class="wrap" id="surmesure">
+        <h2>Sur‑mesure & pré‑commandes</h2>
+        <p>Vous rêvez d’une <strong>inclusion spécifique</strong> (coquillages, fleurs, cristaux) ou d’une <strong>forme</strong> particulière ? Parlez‑nous de votre idée.</p>
+        <div class="band-actions">
+          <a class="btn btn-wa" href="https://wa.me/33749586005?text=Bonjour%20EternaGlow%2C%20j%E2%80%99aimerais%20un%20devis%20sur‑mesure%20pour%20..." target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+        </div>
+        <p class="tiny">Réponse sous 24–48 h ouvrées.</p>
+      </div>
+    </section>
+
+    <!-- Liens utilitaires -->
+    <section class="section">
+      <div class="wrap">
+        <h2>En savoir plus</h2>
+        <ul>
+          <li><a href="temoignages.html">Témoignages & Tarifs</a></li>
+          <li><a href="faq.html">FAQ — commandes, délais, paiements</a></li>
+          <li><a href="apropos.html">À propos — l’atelier EternaGlow</a></li>
+        </ul>
+      </div>
+    </section>
   </main>
 
-  <!-- Drawer Panier -->
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2025 EternaGlow — Tous droits réservés</p>
+      <nav class="footer-nav">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="politique-confidentialite.html">Confidentialité</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Drawer Panier global -->
   <aside id="cartDrawer" class="cart-drawer" aria-hidden="true" role="dialog" aria-labelledby="cartTitle">
-    <div class="cart-header"><h2 id="cartTitle">Votre panier</h2><button id="closeCartBtn" class="cart-close">×</button></div>
+    <div class="cart-header">
+      <h2 id="cartTitle">Votre panier</h2>
+      <button id="closeCartBtn" class="cart-close" aria-label="Fermer le panier">×</button>
+    </div>
+
     <div id="cartItems" class="cart-items"></div>
+
     <div class="cart-footer">
       <div class="cart-total">Total : <span id="cartTotal">0 €</span></div>
       <div class="cart-actions">
         <button id="clearCartBtn" class="btn">Vider</button>
         <a id="checkoutWhatsApp" class="btn btn-wa" href="#" target="_blank" rel="noopener">Valider sur WhatsApp</a>
       </div>
-      <p class="tiny" style="margin-top:8px;">Message récapitulatif ouvert dans WhatsApp (modifiable avant envoi).</p>
+      <p class="tiny" style="margin-top:8px;">Message récapitulatif ouvert dans WhatsApp, modifiable avant envoi.</p>
     </div>
   </aside>
 
