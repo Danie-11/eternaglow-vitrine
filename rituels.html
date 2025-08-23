@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rituels — EternaGlow</title>
+  <meta name="description" content="Rituels doux : brume d’oreiller et sels de bain — bien-être poétique du quotidien." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html"><span class="brand-logo">✨</span><span class="brand-text">EternaGlow</span></a>
+      <nav class="nav">
+        <a href="bougies.html" class="nav-link">Bougies</a>
+        <a href="savons.html" class="nav-link">Savons</a>
+        <a href="bracelets.html" class="nav-link">Bracelets</a>
+        <a href="rituels.html" class="nav-link" aria-current="page">Rituels</a>
+        <a href="temoignages.html" class="nav-link">Témoignages & Tarifs</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="apropos.html" class="nav-link">À propos</a>
+      </nav>
+      <div class="cart-area">
+        <button class="cart-button" id="openCartBtn">🛒 <span id="cartCount">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="wrap">
+      <h1>Rituels & petites douceurs</h1>
+      <p class="sub">Des gestes simples pour apaiser la fin de journée.</p>
+
+      <div class="grid">
+        <article class="card product" data-id="RIT-BRUME-NUIT" data-name="Brume d’oreiller — Nuit douce" data-price="12">
+          <img src="https://placehold.co/600x600/fffbeb/78350f?text=Brume+Nuit+Douce" alt="Brume d’oreiller Nuit Douce — visuel à venir" width="600" height="600" loading="lazy" />
+          <div class="card-body">
+            <span class="badge">À venir</span>
+            <h3>Brume d’oreiller — Nuit douce</h3>
+            <p>Notes légères pour accompagner l’endormissement.</p>
+            <p class="price">12 €</p>
+            <div class="card-actions">
+              <button class="btn btn-primary addToCart">Pré‑commander</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card product" data-id="RIT-SEL-BATH" data-name="Sels de bain — Lumière" data-price="10">
+          <img src="https://placehold.co/600x600/fffbeb/78350f?text=Sels+de+Bain" alt="Sels de bain Lumière — visuel à venir" width="600" height="600" loading="lazy" />
+          <div class="card-body">
+            <span class="badge">À venir</span>
+            <h3>Sels de bain — Lumière</h3>
+            <p>Sel minéral et fleurs séchées pour un bain réconfortant.</p>
+            <p class="price">10 €</p>
+            <div class="card-actions">
+              <button class="btn btn-primary addToCart">Pré‑commander</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <aside id="cartDrawer" class="cart-drawer" aria-hidden="true" role="dialog" aria-labelledby="cartTitle">
+    <div class="cart-header"><h2 id="cartTitle">Votre panier</h2><button id="closeCartBtn" class="cart-close">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total">Total : <span id="cartTotal">0 €</span></div>
+      <div class="cart-actions">
+        <button id="clearCartBtn" class="btn">Vider</button>
+        <a id="checkoutWhatsApp" class="btn btn-wa" href="#" target="_blank" rel="noopener">Valider sur WhatsApp</a>
+      </div>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
