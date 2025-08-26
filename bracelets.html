@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bracelets macramé — EternaGlow</title>
-  <meta name="description" content="Bracelets macramé avec perles énergétiques : quartz rose, améthyste, personnalisations." />
+  <meta name="description" content="Bracelets macramé avec perles énergétiques (quartz rose, améthyste). Réglables, faits main." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -12,70 +12,61 @@
     <div class="wrap">
       <a class="brand" href="index.html"><span class="brand-logo">✨</span><span class="brand-text">EternaGlow</span></a>
       <nav class="nav">
-        <a href="bougies.html" class="nav-link">Bougies</a>
-        <a href="savons.html" class="nav-link">Savons</a>
-        <a href="bracelets.html" class="nav-link" aria-current="page">Bracelets</a>
-        <a href="rituels.html" class="nav-link">Rituels</a>
-        <a href="temoignages.html" class="nav-link">Témoignages & Tarifs</a>
-        <a href="faq.html" class="nav-link">FAQ</a>
-        <a href="apropos.html" class="nav-link">À propos</a>
+        <a class="nav-link" href="chakras.html">Chakra</a>
+        <a class="nav-link" href="bougies.html">Bougies</a>
+        <a class="nav-link" href="savons.html">Savons</a>
+        <a class="nav-link" href="bracelets.html" aria-current="page">Bracelets</a>
+        <a class="nav-link" href="rituels.html">Rituels</a>
+        <a class="nav-link" href="faq.html">FAQ</a>
       </nav>
-      <div class="cart-area">
-        <button class="cart-button" id="openCartBtn">🛒 <span id="cartCount">0</span></button>
-      </div>
+      <div class="cart-area"><button class="cart-button" id="openCartBtn">🛒 <span id="cartCount">0</span></button></div>
     </div>
   </header>
 
   <main class="section">
     <div class="wrap">
       <h1>Bracelets macramé</h1>
-      <p class="sub">Perles énergétiques — réglables — faits main.</p>
+      <p class="sub">Perles énergétiques (8 mm), cordon réglable. Personnalisation sur demande.</p>
 
       <div class="grid">
         <article class="card product" data-id="BRAC-QUARTZ-ROSE" data-name="Bracelet macramé — Quartz rose" data-price="15">
-          <img src="https://placehold.co/600x600/ecfdf5/065f46?text=Quartz+Rose" alt="Bracelet macramé avec perle de quartz rose — visuel à venir" width="600" height="600" loading="lazy" />
+          <img src="https://placehold.co/600x600/ecfdf5/065f46?text=Quartz+Rose" alt="Bracelet macramé quartz rose — visuel à venir" width="600" height="600" loading="lazy">
           <div class="card-body">
             <span class="badge">À venir</span>
             <h3>Bracelet macramé — Quartz rose</h3>
-            <p>Cordon réglable, perle centrale 8 mm. Couleurs au choix.</p>
+            <p>Cordon réglable, perle centrale 8 mm. Couleurs au choix.</p>
             <p class="price">15 €</p>
-            <div class="card-actions">
-              <button class="btn btn-primary addToCart">Pré‑commander</button>
-            </div>
+            <div class="card-actions"><button class="btn btn-primary addToCart">Pré-commander</button></div>
           </div>
         </article>
 
         <article class="card product" data-id="BRAC-AMETHYSTE" data-name="Bracelet macramé — Améthyste" data-price="15">
-          <img src="https://placehold.co/600x600/ecfdf5/065f46?text=Am%C3%A9thyste" alt="Bracelet macramé avec perle d’améthyste — visuel à venir" width="600" height="600" loading="lazy" />
+          <img src="https://placehold.co/600x600/ecfdf5/065f46?text=Am%C3%A9thyste" alt="Bracelet macramé améthyste — visuel à venir" width="600" height="600" loading="lazy">
           <div class="card-body">
             <span class="badge">À venir</span>
             <h3>Bracelet macramé — Améthyste</h3>
-            <p>Cordon réglable, perle centrale 8 mm. Couleurs au choix.</p>
+            <p>Cordon réglable, perle centrale 8 mm. Couleurs au choix.</p>
             <p class="price">15 €</p>
-            <div class="card-actions">
-              <button class="btn btn-primary addToCart">Pré‑commander</button>
-            </div>
+            <div class="card-actions"><button class="btn btn-primary addToCart">Pré-commander</button></div>
           </div>
         </article>
       </div>
 
-      <p class="sub" style="margin-top:16px;">
-        Envie d’une <strong>pierre différente</strong> ou d’une <strong>couleur</strong> précise ?  
-        <a class="btn btn-wa" href="https://wa.me/33749586005?text=Bonjour%20EternaGlow%2C%20je%20souhaite%20un%20bracelet%20personnalis%C3%A9%20:%20pierre%2Fcoul.%20..." target="_blank" rel="noopener">Demander un sur‑mesure</a>
-      </p>
+      <p class="sub" style="margin-top:16px;">Besoin d’une autre pierre/couleur ? <a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/33749586005?text=Bonjour%20EternaGlow%2C%20je%20souhaite%20un%20bracelet%20personnalis%C3%A9%20:%20...">Demander un sur-mesure</a></p>
     </div>
   </main>
 
-  <aside id="cartDrawer" class="cart-drawer" aria-hidden="true" role="dialog" aria-labelledby="cartTitle">
-    <div class="cart-header"><h2 id="cartTitle">Votre panier</h2><button id="closeCartBtn" class="cart-close">×</button></div>
-    <div id="cartItems" class="cart-items"></div>
-    <div class="cart-footer">
-      <div class="cart-total">Total : <span id="cartTotal">0 €</span></div>
-      <div class="cart-actions">
-        <button id="clearCartBtn" class="btn">Vider</button>
-        <a id="checkoutWhatsApp" class="btn btn-wa" href="#" target="_blank" rel="noopener">Valider sur WhatsApp</a>
-      </div>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2025 EternaGlow — Tous droits réservés</p>
+      <nav class="footer-nav"><a href="mentions-legales.html">Mentions légales</a><a href="politique-confidentialite.html">Confidentialité</a></nav>
     </div>
+  </footer>
+
+  <aside id="cartDrawer" class="cart-drawer" aria-hidden="true" role="dialog" aria-labelledby="cartTitle">
+    <div class="cart-header"><h2 id="cartTitle">Votre panier</h2><button id="closeCartBtn" class="cart-close" aria-label="Fermer">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer"><div class="cart-total">Total : <span id="cartTotal">0 €</span></div><div class="cart-actions"><button id="clearCartBtn" class="btn">Vider</button><a id="checkoutWhatsApp" class="btn btn-wa" href="#" target="_blank" rel="noopener">Valider sur WhatsApp</a></div></div>
   </aside>
 
   <script src="script.js"></script>
