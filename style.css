@@ -377,3 +377,29 @@ a:hover { color: var(--or); }
   .nav { flex-wrap:wrap; gap:8px; }
   .hero { padding:60px 16px; }
 }
+/* --- Cards compactes & proportionnées --- */
+.grid{ grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 16px; }
+
+.card{
+  max-width: 380px; margin: 0 auto;
+  display: flex; flex-direction: column; overflow: hidden;
+}
+.card img{
+  width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover;
+  border-radius: 12px 12px 0 0; box-shadow: none;
+}
+.card-body{ display: flex; flex-direction: column; padding: 12px 14px; }
+.card-body h3{ font-size: 1.05rem; line-height: 1.25; margin: 4px 0 6px; min-height: 2.5em; }
+.card-body p{ margin: 0 0 8px; font-size: .95rem; }
+.card-actions{ margin-top: auto; display:flex; gap:8px; flex-wrap: wrap; }
+
+.price{ margin-top: 6px; font-weight: 700; }
+
+/* Badges plus petits */
+.badge{ padding: 3px 8px; font-size: .78rem; }
+
+/* Mobile : réduire encore un peu */
+@media (max-width:640px){
+  .card-body h3{ font-size: 1rem; }
+  .btn{ padding: 9px 14px; font-size: .9rem; }
+}
