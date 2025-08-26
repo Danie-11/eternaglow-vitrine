@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bougies — EternaGlow</title>
+  <meta name="description" content="Bougies transparentes avec inclusions et bougies moulées poétiques. Pré-commandes et sur-mesure." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html"><span class="brand-logo">✨</span><span class="brand-text">EternaGlow</span></a>
+      <nav class="nav">
+        <a class="nav-link" href="chakras.html">Chakra</a>
+        <a class="nav-link" href="bougies.html" aria-current="page">Bougies</a>
+        <a class="nav-link" href="savons.html">Savons</a>
+        <a class="nav-link" href="bracelets.html">Bracelets</a>
+        <a class="nav-link" href="rituels.html">Rituels</a>
+        <a class="nav-link" href="faq.html">FAQ</a>
+      </nav>
+      <div class="cart-area"><button class="cart-button" id="openCartBtn">🛒 <span id="cartCount">0</span></button></div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="wrap">
+      <h1>Bougies artisanales</h1>
+      <p class="sub">Transparences (inclusions coquillages/fleurs) & formes moulées (lune, fleur, corps). Photos réelles à venir.</p>
+
+      <div class="grid">
+        <article class="card product" data-id="CAND-TRANSP-COQ" data-name="Bougie transparente — Coquillages" data-price="18">
+          <img src="https://placehold.co/600x600/fff4f8/9c8f87?text=Bougie+Coquillages" alt="Bougie transparente avec coquillages — visuel à venir" width="600" height="600" loading="lazy">
+          <div class="card-body">
+            <span class="badge">À venir</span>
+            <h3>Bougie transparente — Coquillages</h3>
+            <p>Effet verre clair, inclusions de coquillages naturels.</p>
+            <p class="price">18 €</p>
+            <div class="card-actions"><button class="btn btn-primary addToCart">Pré-commander</button></div>
+          </div>
+        </article>
+
+        <article class="card product" data-id="CAND-TRANSP-FLEUR" data-name="Bougie transparente — Fleurs séchées" data-price="18">
+          <img src="https://placehold.co/600x600/fff4f8/9c8f87?text=Bougie+Fleurs" alt="Bougie transparente fleurs — visuel à venir" width="600" height="600" loading="lazy">
+          <div class="card-body">
+            <span class="badge">À venir</span>
+            <h3>Bougie transparente — Fleurs séchées</h3>
+            <p>Inclusions florales délicates. Parfums doux.</p>
+            <p class="price">18 €</p>
+            <div class="card-actions"><button class="btn btn-primary addToCart">Pré-commander</button></div>
+          </div>
+        </article>
+
+        <article class="card product" data-id="CAND-MOULE-LUNE" data-name="Bougie moulée — Lune" data-price="14">
+          <img src="https://placehold.co/600x600/fff4f8/9c8f87?text=Bougie+Lune" alt="Bougie moulée en forme de lune — visuel à venir" width="600" height="600" loading="lazy">
+          <div class="card-body">
+            <span class="badge">À venir</span>
+            <h3>Bougie moulée — Lune</h3>
+            <p>Cire végétale, forme poétique.</p>
+            <p class="price">14 €</p>
+            <div class="card-actions"><button class="btn btn-primary addToCart">Pré-commander</button></div>
+          </div>
+        </article>
+
+        <article class="card product" data-id="CAND-MOULE-CORPS" data-name="Bougie moulée — Corps féminin" data-price="22">
+          <img src="https://placehold.co/600x600/fff4f8/9c8f87?text=Corps+F%C3%A9minin" alt="Bougie moulée corps féminin — visuel à venir" width="600" height="600" loading="lazy">
+          <div class="card-body">
+            <span class="badge">Série</span>
+            <h3>Bougie moulée — Corps féminin</h3>
+            <p>Cire soja/coco, silhouette stylisée.</p>
+            <p class="price">22 €</p>
+            <div class="card-actions"><button class="btn btn-primary addToCart">Pré-commander</button></div>
+          </div>
+        </article>
+      </div>
+
+      <p class="sub" style="margin-top:16px;">Besoin d’une inclusion ou d’une forme précise ? <a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/33749586005?text=Bonjour%20EternaGlow%2C%20je%20souhaite%20une%20bougie%20personnalis%C3%A9e%20:%20...">Parlez-nous de votre idée</a></p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2025 EternaGlow — Tous droits réservés</p>
+      <nav class="footer-nav"><a href="mentions-legales.html">Mentions légales</a><a href="politique-confidentialite.html">Confidentialité</a></nav>
+    </div>
+  </footer>
+
+  <aside id="cartDrawer" class="cart-drawer" aria-hidden="true" role="dialog" aria-labelledby="cartTitle">
+    <div class="cart-header"><h2 id="cartTitle">Votre panier</h2><button id="closeCartBtn" class="cart-close" aria-label="Fermer">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer"><div class="cart-total">Total : <span id="cartTotal">0 €</span></div><div class="cart-actions"><button id="clearCartBtn" class="btn">Vider</button><a id="checkoutWhatsApp" class="btn btn-wa" href="#" target="_blank" rel="noopener">Valider sur WhatsApp</a></div></div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
