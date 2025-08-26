@@ -430,7 +430,7 @@ a:hover { color: var(--or); }
   .btn{ padding: 9px 14px; font-size: .9rem; }
 }
 .home-hero {
-  background: url("images/eternaglow-fond.png") no-repeat center center;
+  background: url("images/fond-hero-fond.png") no-repeat center center;
   background-size: cover;
   color: white; /* si ton fond est sombre */
   text-shadow: 0 2px 6px rgba(0,0,0,.4);
