@@ -264,9 +264,21 @@ a:hover { color: var(--or); }
 .hero {
   text-align: center;
   padding: 80px 20px;
-  background: url("images/fond-hero.png") no-repeat center center;
+  background: url("images/eternaglow-fond.png") no-repeat center center;
   background-size: cover;
   color: white; /* texte lisible */
+  text-shadow: 0 2px 6px rgba(0,0,0,.5);
+}
+/* Hero par défaut (si tu veux le garder ailleurs) */
+/* .hero { text-align:center; padding:80px 20px; background: linear-gradient(to bottom, var(--rose), transparent); } */
+
+.home-hero{
+  text-align: center;
+  padding: 80px 20px;
+  background:
+    linear-gradient(to bottom, rgba(255,244,248,0.75), rgba(0,0,0,0.25)),
+    url("images/fond-hero.jpg") no-repeat center/cover;
+  color: white;
   text-shadow: 0 2px 6px rgba(0,0,0,.5);
 }
 /* ===== Cards / Grid ===== */
@@ -429,3 +441,37 @@ a:hover { color: var(--or); }
   .card-body h3{ font-size: 1rem; }
   .btn{ padding: 9px 14px; font-size: .9rem; }
 }
+/* Header en 3 colonnes : brand (gauche), nav (centre), panier (droite) */
+.header-grid{
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+}
+
+/* Brand plus grand */
+.brand { display:flex; align-items:center; gap:10px; text-decoration:none; }
+.brand-logo{ width: 34px; height: 34px; }
+.brand-text{
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.6rem;   /* ← plus grand */
+  letter-spacing: .3px;
+}
+
+/* NAV centrée */
+.nav{ display:flex; gap:16px; justify-self: center; flex-wrap: wrap; }
+.nav-link{ padding: 6px 10px; font-weight:600; }
+.nav-link[aria-current="page"] { border-bottom: 2px solid var(--or); }
+
+/* Panier à droite */
+.cart-area{ justify-self: end; }
+/* Tuiles catégories plus compactes */
+.card.category{ max-width: 320px; margin: 0 auto; }
+.card.category img{ aspect-ratio: 3/2; object-fit: cover; }
+.grid{ grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 14px; }
+.card-body{ padding: 10px 12px; }
+.card-body h3{ font-size: 1.05rem; margin: 2px 0 6px; }
+.card-body p{ font-size: .92rem; margin: 0; }
+.icon-wrap{ display:flex; align-items:center; justify-content:center; padding:16px 0 6px; }
