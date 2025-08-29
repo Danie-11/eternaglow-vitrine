@@ -5,19 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Savons — EternaGlow</title>
   <meta name="description" content="Savons solides : transparent aux fleurs, recette douce karité/avoine. Formes coquillage, goutte, étoile, cœur." />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=3" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap">
-      <a class="brand" href="index.html"><span class="brand-logo">✨</span><span class="brand-text">EternaGlow</span></a>
-      <nav class="nav">
+  <header class="site-header" role="banner">
+    <div class="wrap header-grid">
+      <a class="brand" href="index.html" aria-label="Accueil EternaGlow">
+        <span class="brand-logo" aria-hidden="true">✨</span><span class="brand-text">EternaGlow</span>
+      </a>
+      <nav class="nav" role="navigation" aria-label="Navigation principale">
         <a class="nav-link" href="chakras.html">Chakra</a>
         <a class="nav-link" href="bougies.html">Bougies</a>
         <a class="nav-link" href="savons.html" aria-current="page">Savons</a>
         <a class="nav-link" href="bracelets.html">Bracelets</a>
         <a class="nav-link" href="rituels.html">Rituels</a>
-        <a class="nav-link" href="faq.html">FAQ</a>
+        <a class="nav-link" href="temoignages.html">Avis & Tarifs</a>
       </nav>
       <div class="cart-area"><button class="cart-button" id="openCartBtn">🛒 <span id="cartCount">0</span></button></div>
     </div>
@@ -65,10 +67,10 @@
     </div>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="wrap">
       <p>© 2025 EternaGlow — Tous droits réservés</p>
-      <nav class="footer-nav"><a href="mentions-legales.html">Mentions légales</a><a href="politique-confidentialite.html">Confidentialité</a></nav>
+      <nav class="footer-nav" aria-label="Liens légaux"><a href="mentions-legales.html">Mentions légales</a><a href="politique-confidentialite.html">Confidentialité</a></nav>
     </div>
   </footer>
 
