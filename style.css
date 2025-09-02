@@ -202,3 +202,13 @@ p{ margin-bottom:1em; }
   .hero{ padding:60px 16px; }
   .btn{ padding:9px 14px; font-size:.9rem; }
 }
+.card.category img{
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px 12px 0 0;
+  box-shadow: none; /* photo bord à bord, propre */
+}
+.card.category{ max-width: 360px; margin: 0 auto; }
