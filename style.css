@@ -219,8 +219,13 @@ p{ margin-bottom:1em; }
   border-radius: 12px;
 }
 .launch-banner {
-  background: var(--rose);
+  background:
+    radial-gradient(60% 60% at 20% 0%, var(--rose) 0%, transparent 60%),
+    radial-gradient(60% 60% at 100% 100%, var(--vert) 0%, transparent 60%),
+    radial-gradient(60% 60% at 0% 100%, var(--beige) 0%, transparent 60%),
+    #fff;
   color: var(--brun);
+   background: var(--glass);
   text-align: center;
   padding: 10px 16px;
   font-weight: 600;
