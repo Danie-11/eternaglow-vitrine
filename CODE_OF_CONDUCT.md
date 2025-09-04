@@ -16,4 +16,4 @@ Tous les visiteurs, acheteurs et partenaires sont invités à :
 - Attitudes agressives ou dévalorisantes
 - Toute tentative de nuire au projet ou à sa créatrice
 
-📩 Contact : eternaglow-crea@exemple.com
+📩 Contact : eterna.glow.pro@gmail.com
