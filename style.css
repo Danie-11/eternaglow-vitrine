@@ -256,6 +256,11 @@ p{ margin-bottom:1em; }
   background-size: cover;
   color: white;
   text-shadow: 0 2px 6px rgba(0,0,0,.5);
+
+  height: 400px;       /* fixe une hauteur raisonnable */
+  display: flex;
+  align-items: center; /* centre le texte verticalement */
+  justify-content: center;
 }
 
 .hero .lead {
