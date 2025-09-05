@@ -307,7 +307,7 @@ p{ margin-bottom:1em; }
   flex-wrap: wrap;
 }
 .card.product {
-  max-width: 420px;   /* réduit la largeur */
+  max-width: 220px;   /* réduit la largeur */
   margin: 0 auto;     /* centre */
   border-radius: 14px;
   box-shadow: 0 4px 14px rgba(0,0,0,0.06);
