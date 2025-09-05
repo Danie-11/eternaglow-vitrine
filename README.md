@@ -12,4 +12,4 @@ Proposer une vitrine en ligne douce et esthétique pour découvrir mes création
 
 ## 📩 Contact
 - WhatsApp : +33749586005
-- Instagram : @eterna.glow
+- Instagram : eterna.glow.pro@gmail.com
