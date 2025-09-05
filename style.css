@@ -32,6 +32,35 @@
   --pp: #ffc439;
   --ig: #e1306c;
 }
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: url("images/eternaglow_bg_compressed.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed; /* effet élégant type "parallaxe" */
+  color: white;
+  text-shadow: 0 2px 6px rgba(0,0,0,.55);
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+}
+
+.hero .lead {
+  font-size: 1.2rem;
+  max-width: 720px;
+  margin: 0 auto;
+  opacity: .95;
+}
+
+.hero-cta {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
 
 /* ===== Fonts ===== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@500;700&display=swap');
