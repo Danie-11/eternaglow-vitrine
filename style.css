@@ -307,3 +307,16 @@ body.devis-page {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+/* === Arrière-plan scintillant page devis === */
+body.devis-page {
+  background: linear-gradient(120deg, #fff, #fdf4ff, #fffbea, #f0f9ff);
+  background-size: 300% 300%;
+  animation: shimmer-bg 12s ease-in-out infinite;
+}
+
+/* Animation fluide */
+@keyframes shimmer-bg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
