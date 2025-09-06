@@ -242,3 +242,55 @@ p { margin-bottom:1em; }
 .launch-banner a.btn-banner:hover {
   background: #b38f68;
 }
+.form-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+form label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: 600;
+  color: var(--brun);
+}
+
+form input, form select, form textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #e5ded7;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+
+form input:focus, form select:focus, form textarea:focus {
+  border-color: var(--or);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(201,167,133,0.25);
+}
+
+form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+form button {
+  margin-top: 20px;
+  background: var(--or);
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+
+form button:hover {
+  background: #b38f68;
+}
