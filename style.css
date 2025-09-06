@@ -115,9 +115,9 @@ p { margin-bottom:1em; }
 .hero .lead { font-size: 1.2rem; max-width: 720px; margin: 0 auto; opacity: .95; }
 .hero-cta { margin-top: 22px; display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
 
-@media (max-width: 640px) {
+@media (max-width: 620px) {
   .hero {
-    height: 240px;      /* Mobile */
+    height: 220px;      /* Mobile */
     padding: 40px 16px;
     background-size: contain; /* pour afficher l'image entière sur petit écran */
     background-color: #fff;   /* couleur autour si vide */
