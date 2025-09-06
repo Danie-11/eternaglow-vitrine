@@ -115,12 +115,14 @@ p { margin-bottom:1em; }
 .hero .lead { font-size: 1.2rem; max-width: 720px; margin: 0 auto; opacity: .95; }
 .hero-cta { margin-top: 22px; display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .hero {
     height: 240px;      /* Mobile */
     padding: 40px 16px;
     background-size: contain; /* pour afficher l'image entière sur petit écran */
     background-color: #fff;   /* couleur autour si vide */
+   background-position: center top;
+ min-height: 280px;
   }
   .hero h1 { font-size: 1.8rem; }
   .hero .lead { font-size: 1rem; max-width: 90%; }
@@ -216,3 +218,27 @@ p { margin-bottom:1em; }
 /* ===== Animations ===== */
 @keyframes fadeIn { from{opacity:0; transform:translateY(20px);} to{opacity:1; transform:none;} }
 .section, .hero, .card, .contact-band { animation: fadeIn 1s ease both; }
+.launch-banner {
+  background: var(--glass);
+  color: var(--brun);
+  text-align: center;
+  padding: 10px 16px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: var(--shadow);
+}
+
+.launch-banner a.btn-banner {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 6px 12px;
+  background: var(--or);
+  color: var(--noir);
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.launch-banner a.btn-banner:hover {
+  background: #b38f68;
+}
