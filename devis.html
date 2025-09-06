@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demander un devis — EternaGlow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html"><span class="brand-logo">✨</span><span class="brand-text">EternaGlow</span></a>
+      <nav class="nav">
+        <a class="nav-link" href="temoignages.html">Témoignages</a>
+        <a class="nav-link" href="devis.html" aria-current="page">Devis</a>
+        <a class="nav-link" href="faq.html">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="wrap">
+      <h1>Demander un devis</h1>
+      <p class="sub">Chaque création est façonnée sur-mesure. Partagez vos envies et je vous reviens rapidement ✨</p>
+
+      <form action="https://formsubmit.co/eterna.glow.pro@gmail.com" method="POST" enctype="multipart/form-data" class="form-devis">
+        <!-- Champ caché pour redirection après envoi -->
+        <input type="hidden" name="_next" value="https://ton-site.github.io/merci.html">
+        <input type="hidden" name="_captcha" value="false">
+
+        <label>Nom et prénom *</label>
+        <input type="text" name="Nom" required>
+
+        <label>Email *</label>
+        <input type="email" name="Email" required>
+
+        <label>Téléphone</label>
+        <input type="text" name="Téléphone">
+
+        <label>Type de création *</label>
+        <select name="Type" required>
+          <option>Bougie</option>
+          <option>Savon</option>
+          <option>Bracelet</option>
+          <option>Coffret</option>
+          <option>Autre</option>
+        </select>
+
+        <label>Thème / intention</label>
+        <input type="text" name="Thème">
+
+        <label>Couleurs souhaitées</label>
+        <input type="text" name="Couleurs">
+
+        <label>Quantité estimée *</label>
+        <input type="number" name="Quantité" required>
+
+        <label>Date de l’événement</label>
+        <input type="date" name="Date">
+
+        <label>Budget approximatif</label>
+        <input type="text" name="Budget">
+
+        <label>Image d’inspiration (upload)</label>
+        <input type="file" name="Image">
+
+        <label>Message libre</label>
+        <textarea name="Message" rows="5"></textarea>
+
+        <button type="submit" class="btn btn-primary">Envoyer ma demande ✨</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap"><p>© 2025 EternaGlow — Tous droits réservés</p></div>
+  </footer>
+</body>
+</html>
