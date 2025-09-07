@@ -7,6 +7,26 @@
   <meta name="description" content="Bougies transparentes & moulées, savons doux, bracelets macramé et rituels apaisants. Pré-commandes et sur-mesure." />
   <link rel="stylesheet" href="style.css" />
 </head>
+  <script src="https://www.paypal.com/sdk/js?client-id=TON_CLIENT_ID&currency=EUR"></script>
+<script>
+  paypal.Buttons({
+    createOrder: function(data, actions) {
+      return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: document.getElementById("cartTotal").textContent.replace(" €","") // récupère le total du panier
+          }
+        }]
+      });
+    },
+    onApprove: function(data, actions) {
+      return actions.order.capture().then(function(details) {
+        alert('Merci ' + details.payer.name.given_name + '! Votre paiement a été effectué.');
+        // Ici tu peux aussi vider le panier ou rediriger vers une page "merci"
+      });
+    }
+  }).render('#paypal-button-container');
+</script>
 <body>
   <!-- Bandeau promo -->
   <div class="launch-banner">
@@ -110,11 +130,10 @@
     <div class="cart-footer">
       <div class="cart-total">Total : <span id="cartTotal">0 €</span></div>
       <div class="cart-actions">
-        <button id="clearCartBtn" class="btn">Vider</button>
-        <a id="checkoutWhatsApp" class="btn btn-wa" href="#" target="_blank" rel="noopener">Valider sur WhatsApp</a>
-      </div>
-      <p class="tiny" style="margin-top:8px;">Message récapitulatif modifiable avant envoi.</p>
-    </div>
+  <button id="clearCartBtn" class="btn">Vider</button>
+  <!-- Bouton PayPal -->
+  <div id="paypal-button-container"></div>
+</div>
   </aside>
 
   <script src="script.js"></script>
