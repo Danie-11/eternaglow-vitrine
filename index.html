@@ -7,37 +7,6 @@
   <meta name="description" content="Bougies transparentes & moulées, savons doux, bracelets macramé et rituels apaisants. Pré-commandes et sur-mesure." />
   <link rel="stylesheet" href="style.css" />
 </head>
-  <script src="https://www.paypal.com/sdk/js?client-id=TON_CLIENT_ID&currency=EUR"></script>
-<script>
-  paypal.Buttons({
-    createOrder: function(data, actions) {
-      // Récupérer total panier
-      let total = document.getElementById("cartTotal").textContent.replace(" €","");
-      // Récupérer noms articles
-      let items = [];
-      document.querySelectorAll("#cartItems .line-info strong").forEach(el => {
-        items.push(el.textContent);
-      });
-      let produits = items.join(", ") || "Commande artisanale";
-
-      return actions.order.create({
-        purchase_units: [{
-          description: "EternaGlow — " + produits,
-          amount: {
-            currency_code: "EUR",
-            value: total
-          }
-        }]
-      });
-    },
-    onApprove: function(data, actions) {
-      return actions.order.capture().then(function(details) {
-        // Redirection page merci.html
-        window.location.href = "merci.html";
-      });
-    }
-  }).render('#paypal-button-container');
-</script>
 <body>
   <!-- Bandeau promo -->
   <div class="launch-banner">
@@ -139,14 +108,54 @@
     <div class="cart-header"><h2 id="cartTitle">Votre panier</h2><button id="closeCartBtn" class="cart-close" aria-label="Fermer">×</button></div>
     <div id="cartItems" class="cart-items"></div>
     <div class="cart-footer">
-      <div class="cart-total">Total : <span id="cartTotal">0 €</span></div>
-      <div class="cart-actions">
-  <button id="clearCartBtn" class="btn">Vider</button>
-  <!-- Bouton PayPal -->
-  <div id="paypal-button-container"></div>
+  <div class="cart-total">
+    Total : <span id="cartTotal">0 €</span>
+  </div>
+  
+  <div class="cart-actions">
+    <button id="clearCartBtn" class="btn">Vider</button>
+    <!-- Bouton PayPal -->
+    <div id="paypal-button-container" style="margin-top:10px; width:100%;"></div>
+  </div>
+  
+  <p class="tiny" style="margin-top:8px;">Paiement sécurisé via PayPal (CB ou compte).  
+  Libellé : <b>EternaGlow</b> + vos produits.</p>
 </div>
   </aside>
 
   <script src="script.js"></script>
+  <!-- SDK PayPal -->
+<script src="https://www.paypal.com/sdk/js?client-id=TON_CLIENT_ID&currency=EUR"></script>
+
+<script>
+paypal.Buttons({
+  createOrder: function(data, actions) {
+    // Récupère le montant du panier
+    let total = document.getElementById("cartTotal").textContent.replace(" €","");
+    // Récupère les noms d’articles
+    let items = [];
+    document.querySelectorAll("#cartItems .line-info strong").forEach(el => {
+      items.push(el.textContent);
+    });
+    let produits = items.join(", ") || "Commande artisanale";
+
+    return actions.order.create({
+      purchase_units: [{
+        description: "EternaGlow — " + produits,
+        amount: {
+          currency_code: "EUR",
+          value: total
+        }
+      }]
+    });
+  },
+  onApprove: function(data, actions) {
+    return actions.order.capture().then(function(details) {
+      // Redirection après succès
+      window.location.href = "merci.html";
+    });
+  }
+}).render('#paypal-button-container');
+</script>
 </body>
 </html>
