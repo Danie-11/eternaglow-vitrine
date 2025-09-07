@@ -320,3 +320,33 @@ body.devis-page {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+/* ===== Témoignages ===== */
+.temoignages-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 30px;
+}
+
+.temoignage {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.temoignage:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.temoignage .texte {
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.temoignage .auteur {
+  font-weight: 600;
+  color: var(--brun);
+}
