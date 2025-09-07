@@ -403,3 +403,14 @@ body.devis-page {
   opacity: 1;
   transform: translateY(0);
 }
+/* Animation fade-in commune pour cartes et témoignages */
+.fade-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
